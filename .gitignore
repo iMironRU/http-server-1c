@@ -1,0 +1,30 @@
+# Артефакты сборки и временные базы
+/base/
+/build/*.cfe
+/build/*.cf
+/build/*.zip
+
+# Распакованные исходники чужих cf (наши собственные — в src/cfe/)
+/src/bsp/
+/src/oidc/
+/src/http_server/
+
+# Большие cf-исходники, которые мы не хотим класть в git
+/ut_cf.cf
+/OpenIDConnectProvider.cf
+/http_server.cf
+/Расширение.cfe
+
+# Локальный конфиг
+/.v8-project.json
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Логи и таймпы
+*.log
+*.tmp
