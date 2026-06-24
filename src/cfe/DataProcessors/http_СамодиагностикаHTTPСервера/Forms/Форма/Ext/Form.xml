@@ -3,7 +3,10 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>true</Autofill>
 	</AutoCommandBar>
-	<ChildItems>
+	&#13;
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events><ChildItems>
 		<Button name="КнопкаЗапустить" id="1">
 			<CommandName>Form.Command.ЗапуститьТесты</CommandName>
 			<Title>
@@ -101,6 +104,15 @@
 			</Title>
 			<ExtendedTooltip name="КнопкаОбновлениеРасширеннаяПодсказка" id="28"/>
 		</Button>
+		<InputField name="ПолеТекущаяВерсия" id="29">
+			<DataPath>ТекущаяВерсия</DataPath>
+			<ContextMenu name="ПолеТекущаяВерсияКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ПолеТекущаяВерсияРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<Button name="КнопкаСнятьБезопасныйРежим" id="32">
+			<CommandName>Form.Command.СнятьБезопасныйРежим</CommandName>
+			<ExtendedTooltip name="КнопкаСнятьБезопасныйРежимРасширеннаяПодсказка" id="33"/>
+		</Button>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -170,6 +182,15 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ТекущаяВерсия" id="7">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 <Commands>
 		<Command name="ЗапуститьТесты" id="1">
@@ -177,5 +198,8 @@
 		</Command>
 		<Command name="ПроверитьОбновление" id="2">
 			<Action>ПроверитьОбновление</Action>
+		</Command>
+		<Command name="СнятьБезопасныйРежим" id="3">
+			<Action>СнятьБезопасныйРежим</Action>
 		</Command>
 	</Commands></Form>
